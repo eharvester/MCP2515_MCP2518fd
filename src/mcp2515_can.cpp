@@ -728,6 +728,95 @@ byte mcp2515_can::mcp2515_configRate(const byte canSpeed, const byte clock) {
             }
             break;
 
+        case (MCP_4MHz) :
+            switch (canSpeed) {
+
+                case (CAN_500KBPS) :
+                    cfg1 = MCP_4MHz_500kBPS_CFG1;
+                    cfg2 = MCP_4MHz_500kBPS_CFG2;
+                    cfg3 = MCP_4MHz_500kBPS_CFG3;
+                    break;
+
+                case (CAN_250KBPS) :
+                    cfg1 = MCP_4MHz_250kBPS_CFG1;
+                    cfg2 = MCP_4MHz_250kBPS_CFG2;
+                    cfg3 = MCP_4MHz_250kBPS_CFG3;
+                    break;
+
+                case (CAN_200KBPS) :
+                    cfg1 = MCP_4MHz_200kBPS_CFG1;
+                    cfg2 = MCP_4MHz_200kBPS_CFG2;
+                    cfg3 = MCP_4MHz_200kBPS_CFG3;
+                    break;
+
+                case (CAN_125KBPS) :
+                    cfg1 = MCP_4MHz_125kBPS_CFG1;
+                    cfg2 = MCP_4MHz_125kBPS_CFG2;
+                    cfg3 = MCP_4MHz_125kBPS_CFG3;
+                    break;
+
+                case (CAN_100KBPS) :
+                    cfg1 = MCP_4MHz_100kBPS_CFG1;
+                    cfg2 = MCP_4MHz_100kBPS_CFG2;
+                    cfg3 = MCP_4MHz_100kBPS_CFG3;
+                    break;
+
+                case (CAN_80KBPS) :
+                    cfg1 = MCP_4MHz_80kBPS_CFG1;
+                    cfg2 = MCP_4MHz_80kBPS_CFG2;
+                    cfg3 = MCP_4MHz_80kBPS_CFG3;
+                    break;
+
+                case (CAN_50KBPS) :
+                    cfg1 = MCP_4MHz_50kBPS_CFG1;
+                    cfg2 = MCP_4MHz_50kBPS_CFG2;
+                    cfg3 = MCP_4MHz_50kBPS_CFG3;
+                    break;
+
+              case (CAN_40KBPS) :
+                    cfg1 = MCP_4MHz_40kBPS_CFG1;
+                    cfg2 = MCP_4MHz_40kBPS_CFG2;
+                    cfg3 = MCP_4MHz_40kBPS_CFG3;
+                    break;
+
+                case (CAN_31K25BPS) :
+                    cfg1 = MCP_4MHz_31k25BPS_CFG1;
+                    cfg2 = MCP_4MHz_31k25BPS_CFG2;
+                    cfg3 = MCP_4MHz_31k25BPS_CFG3;
+                    break;
+
+                case (CAN_20KBPS) :
+                    cfg1 = MCP_4MHz_20kBPS_CFG1;
+                    cfg2 = MCP_4MHz_20kBPS_CFG2;
+                    cfg3 = MCP_4MHz_20kBPS_CFG3;
+                    break;
+
+               case (CAN_10KBPS) :
+                    cfg1 = MCP_4MHz_10kBPS_CFG1;
+                    cfg2 = MCP_4MHz_10kBPS_CFG2;
+                    cfg3 = MCP_4MHz_10kBPS_CFG3;
+                    break;
+
+               case (CAN_5KBPS) :
+                    cfg1 = MCP_4MHz_5kBPS_CFG1;
+                    cfg2 = MCP_4MHz_5kBPS_CFG2;
+                    cfg3 = MCP_4MHz_5kBPS_CFG3;
+                    break;
+
+               case (CAN_2K5BPS) :
+                    cfg1 = MCP_4MHz_2k5BPS_CFG1;
+                    cfg2 = MCP_4MHz_2k5BPS_CFG2;
+                    cfg3 = MCP_4MHz_2k5BPS_CFG3;
+                    break;
+
+
+                default:
+                    set = 0;
+                    break;
+            }
+            break;
+
+
         default:
             set = 0;
             break;

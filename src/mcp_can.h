@@ -22,6 +22,7 @@ typedef enum {
     MCP_16MHz,
     MCP_12MHz,
     MCP_8MHz,
+    MCP_4MHz,
     /* apply to MCP2518FD */
     MCP2518FD_40MHz = MCP_16MHz /* To compatible MCP2515 shield */,
     MCP2518FD_20MHz,
@@ -30,6 +31,7 @@ typedef enum {
 
 typedef enum {
     CAN_NOBPS,
+    CAN_2K5BPS,
     CAN_5KBPS,
     CAN_10KBPS,
     CAN_20KBPS,

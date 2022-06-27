@@ -476,6 +476,64 @@
 #define MCP_8MHz_5kBPS_CFG2 (0xbf)
 #define MCP_8MHz_5kBPS_CFG3 (0x07)
 
+// clock speed 4 MHz
+
+#define MCP_4MHz_500kBPS_CFG1 (0x00)
+#define MCP_4MHz_500kBPS_CFG2 (0x80)
+#define MCP_4MHz_500kBPS_CFG3 (0x00)
+
+#define MCP_4MHz_400kBPS_CFG1 (0x00)
+#define MCP_4MHz_400kBPS_CFG2 (0x80)
+#define MCP_4MHz_400kBPS_CFG3 (0x01)
+
+#define MCP_4MHz_250kBPS_CFG1 (0x00)
+#define MCP_4MHz_250kBPS_CFG2 (0x90)
+#define MCP_4MHz_250kBPS_CFG3 (0x02)
+
+#define MCP_4MHz_200kBPS_CFG1 (0x00)
+#define MCP_4MHz_200kBPS_CFG2 (0x99)
+#define MCP_4MHz_200kBPS_CFG3 (0x02)
+
+#define MCP_4MHz_125kBPS_CFG1 (0x00)
+#define MCP_4MHz_125kBPS_CFG2 (0xb1)
+#define MCP_4MHz_125kBPS_CFG3 (0x05) 
+
+#define MCP_4MHz_100kBPS_CFG1 (0x00)
+#define MCP_4MHz_100kBPS_CFG2 (0xBB)
+#define MCP_4MHz_100kBPS_CFG3 (0x06)
+
+#define MCP_4MHz_80kBPS_CFG1 (0x00)
+#define MCP_4MHz_80kBPS_CFG2 (0xBF)
+#define MCP_4MHz_80kBPS_CFG3 (0x07)
+
+#define MCP_4MHz_50kBPS_CFG1 (0x01)
+#define MCP_4MHz_50kBPS_CFG2 (0xBB)
+#define MCP_4MHz_50kBPS_CFG3 (0x06)
+
+#define MCP_4MHz_40kBPS_CFG1 (0x01)
+#define MCP_4MHz_40kBPS_CFG2 (0xBF)
+#define MCP_4MHz_40kBPS_CFG3 (0x07)
+
+#define MCP_4MHz_31k25BPS_CFG1 (0x03)
+#define MCP_4MHz_31k25BPS_CFG2 (0xA4)
+#define MCP_4MHz_31k25BPS_CFG3 (0x04)
+
+#define MCP_4MHz_20kBPS_CFG1 (0x03)
+#define MCP_4MHz_20kBPS_CFG2 (0xBF)
+#define MCP_4MHz_20kBPS_CFG3 (0x07)
+
+#define MCP_4MHz_10kBPS_CFG1 (0x07)
+#define MCP_4MHz_10kBPS_CFG2 (0xbf)
+#define MCP_4MHz_10kBPS_CFG3 (0x07)
+
+#define MCP_4MHz_5kBPS_CFG1 (0x0f)
+#define MCP_4MHz_5kBPS_CFG2 (0xbf)
+#define MCP_4MHz_5kBPS_CFG3 (0x07)
+
+#define MCP_4MHz_2k5BPS_CFG1 (0x1f)
+#define MCP_4MHz_2k5BPS_CFG2 (0xbf)
+#define MCP_4MHz_2k5BPS_CFG3 (0x07)
+
 #define MCPDEBUG        (0)
 #define MCPDEBUG_TXBUF  (0)
 #define MCP_N_TXBUFFERS (3)
