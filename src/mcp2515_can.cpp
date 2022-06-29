@@ -314,13 +314,15 @@ byte mcp2515_can::sleep() {
 *********************************************************************************************************/
 byte mcp2515_can::wake() {
 
+    uint16_t TimeOut = 0;
+
     byte currMode = getMode();
 
     if (currMode == mcpMode) {
         return CAN_OK;
     } else {
         // we have to wait on mode LISTENONLY since MODE state machine is slow
-        for(byte i = 0; i < TIMEOUTVALUE;i++ ) { 
+        for(TimeOut = 0; TimeOut < TIMEOUTVALUE;TimeOut++ ) { 
             if (currMode == MODE_LISTENONLY)  {break;} 
             if (currMode == MODE_NORMAL) {
                 mcp2515_modifyRegister(MCP_CANINTF, MCP_WAKIF, 0); 
@@ -349,7 +351,7 @@ byte mcp2515_can::wake() {
         if (!wakeIntEnabled) mcp2515_modifyRegister(MCP_CANINTE, MCP_WAKIF, 0);
 
         // we have to wait on mode LISTENONLY since MODE state machine is slow
-        for(byte i = 0; i < TIMEOUTVALUE;i++ ) { 
+        for(TimeOut = 0; TimeOut < TIMEOUTVALUE;TimeOut++ ) { 
             if (currMode == MODE_LISTENONLY)  {break;}
             if (currMode == MODE_NORMAL) {
                 mcp2515_modifyRegister(MCP_CANINTF, MCP_WAKIF, 0); 
@@ -406,11 +408,12 @@ byte mcp2515_can::mcp2515_setCANCTRL_Mode(const byte newmode) {
 *********************************************************************************************************/
 byte mcp2515_can::mcp2515_requestNewMode(const byte newmode) {
     // mode request and 200ms wait was a bad idea, because it makes the software slow or might hang
+    uint16_t TimeOut = 0;
 
     mcp2515_modifyRegister(MCP_CANCTRL, MODE_MASK, newmode);
 
     // we have to wait on new mode, since MODE state machine is a bit slow
-    for(byte i = 0; i < TIMEOUTVALUE;i++ ) { 
+    for(TimeOut = 0; TimeOut < TIMEOUTVALUE;TimeOut++ ) { 
         byte statReg = getMode();
         if ((statReg & MODE_MASK) == newmode) { // We're now in the new mode
             return MCP2515_OK;
